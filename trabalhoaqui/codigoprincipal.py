@@ -78,7 +78,7 @@ while True:
                 print(f'\033[36m Paranbéns {desafiador} você acertou e venceu a partida !\033[m')
                 pontos_desafiador += 1
                 xxx=fim()
-                jogar_mais = str(input('Jogar mais [S/N]:'))
+                jogar_mais = str(input('\033[36mJogar mais [S/N]: \033[m'))
                 if jogar_mais == 's':
                     print()
                 elif jogar_mais == 'n':
@@ -88,7 +88,7 @@ while True:
                 print(f'\033[31mVoce errou a palavra (CORRETA : {palavra} ) e o jogador {desafiado} venceu !\033[m')
                 pontos_desafiado += 1 
                 xxx=fim()
-                jogar_mais = str(input('Jogar mais: '))
+                jogar_mais = str(input('\033[36mJogar mais [S/N]: \033[m'))
                 if jogar_mais == 's':
                     print()
                 elif jogar_mais == 'n':
@@ -112,7 +112,7 @@ while True:
             for i in range(ce, len(palavra)):
                 if letra == palavra[i]:
                     riscos[i] = letra
-                    certo += 1 
+                    certo += 1
         else:  
 
             errados += 1
@@ -122,7 +122,7 @@ while True:
         desenha_jogo(desafiado,palavra,errados, len(palavra))
         if errados == 6:
             pontos_desafiado += 1
-            jogar_mais = str(input('Jogar mais: '))
+            jogar_mais = str(input('\033[36mJogar mais [S/N]: \033[m'))
             if jogar_mais == 's':
                 print()
             elif jogar_mais == 'n':
@@ -134,7 +134,7 @@ while True:
         completou(certo, palavra, desafiador)
         if certo == len(palavra):
             pontos_desafiador += 1
-            jogar_mais = str(input('Jogar mais: '))
+            jogar_mais = str(input('\033[36mJogar mais [S/N]: \033[m')).lower()
             if jogar_mais == 's':
                 print()
             elif jogar_mais == 'n':
